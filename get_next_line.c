@@ -6,7 +6,7 @@
 /*   By: tshimoda <tshimoda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 10:01:24 by tshimoda          #+#    #+#             */
-/*   Updated: 2021/09/26 15:53:29 by tshimoda         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:09:57 by tshimoda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,6 @@ char	*ft_after_newline(char *statique)
 	return (after_newline);
 }
 
-char	*ft_too_many_lines(char *BUFF_STR)
-{
-	free(BUFF_STR);
-	return (NULL);
-}
-
 char	*get_next_line(int fd)
 {
 	static char	*statique[OPEN_MAX];
@@ -106,7 +100,7 @@ char	*get_next_line(int fd)
 	{
 		return_value = read(fd, buff_str, BUFFER_SIZE);
 		if (return_value == -1)
-			return (ft_too_many_lines(buff_str));
+			return (ft_free(buff_str));
 		buff_str[return_value] = '\0';
 		statique[fd] = ft_strjoin(statique[fd], buff_str);
 	}

@@ -6,21 +6,21 @@
 /*   By: tshimoda <tshimoda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 10:02:20 by tshimoda          #+#    #+#             */
-/*   Updated: 2021/09/26 15:49:32 by tshimoda         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:11:53 by tshimoda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_free(char *statique)
+char	*ft_free(char *str)
 {
-	free(statique);
+	free(str);
 	return (0);
 }
 
-int	ft_is_newline(char *statique)
+int	ft_is_newline(char *str)
 {
-	if (statique[0] == '\n')
+	if (str[0] == '\n')
 		return (1);
 	return (0);
 }

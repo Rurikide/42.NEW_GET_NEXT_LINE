@@ -6,7 +6,7 @@
 /*   By: tshimoda <tshimoda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 10:01:48 by tshimoda          #+#    #+#             */
-/*   Updated: 2021/09/26 15:32:04 by tshimoda         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:11:08 by tshimoda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # include <limits.h>
 
 char	*get_next_line(int fd);
-char	*ft_free(char *statique);
-int		ft_is_newline(char *statique);
+char	*ft_free(char *str);
+int		ft_is_newline(char *str);
 int		ft_strlen(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
 
